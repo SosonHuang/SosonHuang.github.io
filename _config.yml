@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: superchaoxian@163.com
 description: "热爱移动互联网 ios android 产品 电商 o2o 创业 | 黄超贤，Web & IOS Android Engineer | 这里是 @SosonWong 黄超贤 的个人博客，一起研究。"
 keyword: "黄超贤, Soson, 超人, 产品经理, IOS深入, @SosonWong, 黄超贤的博客, Soson Blog, 博客, 个人网站, 互联网, O2O研究, 电子商务, 创业, 商业模式, 安卓, IOS开发,万表网"
-url: "soson.wang"              # your host, for absolute URL
+url: "http://www.soson.wang"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 

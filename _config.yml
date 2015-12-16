@@ -21,8 +21,8 @@ author_image: "/assets/images/author.jpg"
 
 paginate:	5
 
-url: "soson.wang" # the base hostname & protocol for your site
-baseurl: "soson.wang"
+url: "http://www.soson.wang" # the base hostname & protocol for your site
+baseurl: "http://www.soson.wang"
 #used to display twitter cards
 twitter_handle: '@dirkfabisch'
 

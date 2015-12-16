@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build settings
 markdown: redcarpet
 highlighter: pygments
@@ -8,6 +9,22 @@ gems:
 title: "Mediator"
 description: > # this means to ignore newlines until "email:"
    A Jekyll theme - Medium inspired
+=======
+url: "http://www.soson.wang"
+baseurl: "SosonHuang.github.io"
+
+# Site settings
+title: Awesome Title
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: fed136
+  secondary: fec503  
+  secondary-dark: 333
+>>>>>>> origin/master
 
 email: a-mail@mail.mail
 #blog logo
@@ -29,6 +46,7 @@ twitter_handle: '@dirkfabisch'
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
 
+<<<<<<< HEAD
 # social icons and sharing options
 social:
   - icon:	twitter
@@ -58,3 +76,8 @@ social:
 #    share_url:
 #    share_title:
 #    share_link:
+=======
+# Build settings
+markdown: kramdown
+permalink: pretty
+>>>>>>> origin/master

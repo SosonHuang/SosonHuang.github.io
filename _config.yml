@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 # Build settings
 markdown: redcarpet
 highlighter: pygments
@@ -30,7 +33,10 @@ twitter_handle: '@dirkfabisch'
 #fill in disqus shortname to use disqus
 #disqus: disqus-shortname
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 # social icons and sharing options
 social:
   - icon:	twitter

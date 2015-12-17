@@ -60,7 +60,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: " Passionate about technology, I'm currently a software engineering student who writes code for pleasure."
-sidebar-avatar: /img/avatar-whm.jpg     # use absolute URL.
+sidebar-avatar: /img/avatar-whm.png     # use absolute URL.
 
 
 

@@ -1,61 +1,88 @@
-# Build settings
-markdown: redcarpet
-highlighter: pygments
-gems:
-  - jemoji
-  
 # Site settings
-title: "Soson"
-description: > # this means to ignore newlines until "email:"
-   A Jekyll theme - Medium inspired
-
-email: a-mail@mail.mail
-#blog logo
-logo: "/assets/images/df_logo.jpg"
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
-
-name: 'Dirk Fabisch'
-author: 'Dirk Fabisch'
-author_image: "/assets/images/author.jpg"
-
-paginate: 5
-
-url: "http://soson.wang" # the base hostname & protocol for your site
+title: Soson Blog
+SEOTitle: 黄超贤 | Soson WANG
+header-img: img/home-bg-mirror.jpg
+email: superchaoxian@163.com
+description: "宁静致远  厚德载物  天道酬勤  持之以恒"
+keyword: "黄超贤, Soson WANG, IOS开发, IOS工程师, IOS深入学习, @Sosonwong, 产品经理, Android Development, Software Engineer, 产品研发, 篮球"
+url: "http://www.soson.wang"
 baseurl: ""
-#used to display twitter cards
-twitter_handle: '@dirkfabisch'
 
-#fill in disqus shortname to use disqus
-#disqus: disqus-shortname
 
-# social icons and sharing options
-social:
-  - icon: twitter
-    url:  https://twitter.com/dirkfabisch
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
 
-#  - icon:  facebook
-#    url: https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: https://www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
+# SNS settings
+RSS: true
+weibo_username:     SosonWong
+zhihu_username:     SosonWong
+github_username:    SosonHuang
+#twitter_username:  huxpro
+#linkedin_username: hongming-wang
+#facebook_username:  huxpro
 
-  - icon: github
-    url:  https://github.com/dirkfabisch
-    desc: Fork me on github
-    share_url:
-    share_title:
-    share_link:
 
-#  - icon:  google-plus
-#    url: https://google.com/???
-#    desc:  Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
 
+# Build settings
+highlighter: pygments
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Duoshuo settings
+duoshuo_username: sosonblog
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+ 
+# Analytics settings
+# Baidu Analytics
+#ba_track_id: 3b26b24320f102b660a371a3337ff0f7
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: " Passionate about technology, I'm currently a software engineering student who writes code for pleasure."
+sidebar-avatar: /img/avatar-whm.jpg     # use absolute URL.
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+# friends: [
+#     {
+#         title: "byvoid",
+#         href: "http://www.byvoid.com"
+#     },{
+#         title: "Alexia",
+#         href: "http://blog.csdn.net/lanxuezaipiao/"
+#     },{
+#         title: "July",
+#         href: "http://blog.csdn.net/v_JULY_v"
+#     },{
+#         title: "赵劼",
+#         href: "http://blog.zhaojie.me/"
+#     }
+# ]

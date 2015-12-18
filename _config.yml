@@ -1,6 +1,6 @@
 # Site settings
 title: Soson Blog
-SEOTitle: 黄超贤 | Soson WANG
+SEOTitle: 黄超贤 | Soson
 header-img: img/home-bg-mirror.jpg
 email: superchaoxian@163.com
 description: "宁静致远  厚德载物  天道酬勤  持之以恒"
@@ -13,7 +13,7 @@ baseurl: ""
 # SNS settings
 RSS: true
 weibo_username:     SosonWong
-zhihu_username:     SosonWong
+zhihu_username:     Soson
 github_username:    SosonHuang
 #twitter_username:  huxpro
 #linkedin_username: hongming-wang
@@ -59,7 +59,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: " Passionate about technology, I'm currently a software engineering student who writes code for pleasure."
+sidebar-about-description: "敲敲代码，聊聊产品，探讨探讨商业模式，看看世界！"
 sidebar-avatar: /img/avatar-whm.jpg     # use absolute URL.
 
 

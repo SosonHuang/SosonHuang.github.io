@@ -53,15 +53,3 @@ JavaScript 有着很奇怪的命名史。
 
   
 
-* TC39 的 [Github 仓库](https://github.com/tc39/ecma262)上可以看到所有目前公开的提案
-* 如果你还不熟悉 ES6，Babel 有一个[很不错的特性概览](https://babeljs.io/docs/learn-es2015/)
-* 如果你希望深入 ES6，这里有两本很不错的书： Axel Rauschmayer 的 [Exploring ES6](http://exploringjs.com/)和 Nicholas Zakas 的 [Understanding ECMAScript 6](https://leanpub.com/understandinges6)。Axel 的博客 [2ality](http://www.2ality.com/) 也是很不错的 ES6 资源
-
-<img class="shadow" width="320" src="/img/in-post/post-js-version/keep-calm-and-learn-javascript.png" />
-<small class="img-hint">来学 JavaScript 吧！</small>
-
-#### 著作权声明
-
-本文译自 [ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?](http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/)   
-译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接
-

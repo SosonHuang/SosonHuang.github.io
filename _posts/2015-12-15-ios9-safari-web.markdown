@@ -320,22 +320,3 @@ Bug 通常都要在几周之后才会显露出来，我也会持续跟进并更�
 
 * 对于 Home Screen webapps（添加至主屏的 web 应用），`apple-mobile-web-app-status-bar-style` 这个 meta 标签不起作用了！所以你现在不能再像过去一样使用 `black-translucent` 让你的 webapp 渲染在状态栏的后面了。
 * Speech Synthesis API （语音综合 API）不再工作了
-
-
-### 仍在等待……
-
-当 Mac 上的 Safari、桌面电脑与 Android 上的 Chrome 都已经为网站支持 Push Notification （通知推送）时，iOS 上的 Safari 仍然不支持这个特性。就 API 而言，我们仍然没有：WebRTC、getUserMedia、Service Worker、FileSystem API、Network Information API、Battery Status API、Vibration API 等等……你又在 iOS 上等待哪些特性呢？ 
-
-### watchOS 与 tvOS
-
-新发布的 watchOS 2.0 与 tvOS 9.0 都是基于 iOS 的操作系统，它们针对特定的设备发行（Apple Watch 与新的 Apple TV）。从用户的角度来说，那里并没有浏览器了。从开发者的角度，那里也没有 Webview 了。
-
-尽管有不少人抱怨（大部分都是针对 webview 的缺失），我并不能确定这是不是个坏主意。我猜测 Apple 会尝试通过 Siri 来将 “web” 带给 TV、手表、甚至 CarPlay 的用户。所以，如果你遵循了上述的 “App Search” 的步骤，你的内容将可能通过 Siri 在这些设备上以 widget（小部件）或者快捷回复的形式变得可以访问。
-
-对于 Apple TV ，它支持使用 JavaScript、DOM API 与 XMLHttpRequest 来让我们构建某种类似 Client-Server webapp 的东西。没有 HTML 和 CSS，这是什么把戏？其实它支持的叫 TVML，是一种基于 XML、为那些可以被渲染在 TV 屏幕上的特定内容而优化后的标签。这些标签只可以在来自应用商店的 native app 中渲染，但是这些 TVML 是由服务器端来生成的。
-
-
-### 著作权声明
-
-本文译自 [iOS 9, Safari and the Web: 3D Touch, new Responsive Web Design, Native integration and HTML5 APIs --- Breaking the Mobile Web](http://www.mobilexweb.com/blog/ios9-safari-for-web-developers)   
-译者 [黄玄](http://weibo.com/huxpro)，首次发布于 [Hux Blog](http://huangxuan.me)，转载请保留以上链接

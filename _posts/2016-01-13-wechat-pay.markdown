@@ -1,15 +1,13 @@
 ---
 layout:     post
-title:      "微信支付遇到的坑，只出现确定按钮"
-subtitle:   " \"!!!!!!\""
+title:      "iOS微信支付遇到的坑，只出现确定按钮"
+subtitle:   " \"\""
 date:       2016-01-13 05:26
-author:     "Hux"
+author:     "Soson"
 header-img: "img/post-bg-2016-1-13.jpg"
 tags:
     - 微信支付
 ---
-
-> “微信支付”
 
 
 
@@ -80,17 +78,16 @@ http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=ios
 
 微信返回json数据：
 
-> {
+> { 
+> 
+> "appid":"wxb4ba3c02aa476ea1",
+> 
+> "noncestr":"c7231910e1e20e0a191d1642dad303fc",     "package":"Sign=WXPay", 
+> 
+> "partnerid":"10000100", "prepayid":"wx20160111150104c44da8bc940979319430", "timestamp":"1452495664", "sign":"1FC0C04F79B9B15B4769751C8CEC2C69" 
+> 
+> }
 
- "appid":"wxb4ba3c02aa476ea1",
-
- "noncestr":"c7231910e1e20e0a191d1642dad303fc",     "package":"Sign=WXPay", 
-
- "partnerid":"10000100", "prepayid":"wx20160111150104c44da8bc940979319430", "timestamp":"1452495664", 
-
-"sign":"1FC0C04F79B9B15B4769751C8CEC2C69" 
-
- }
 
 > //调起微信支付
 

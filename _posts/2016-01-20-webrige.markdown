@@ -1,0 +1,101 @@
+---
+layout:     post
+title:      "使用WebViewJavascriptBridge使OC跟JS进行互调"
+subtitle:   "WebViewJavascriptBridge的点滴"
+date:       2016-01-20
+author:     "Soson"
+header-img: "img/home-bg-geek.jpg"
+tags:
+    - WebViewJavascriptBridge
+---
+
+
+
+WebViewJavaScriptBridge是一个iOS/OSX 在UIWebViews/WebViews中obj-C和javascript发送消息的一个桥接
+
+Github地址：https://github.com/marcuswestin/WebViewJavascriptBridge
+
+
+
+> 问题：
+> 
+> 在UIWebView中load前端写的xx.js文件，不会进入connectWebViewJavascriptBridge方法，导致
+> 
+> js调用不到oc定义的接口
+
+​     
+
+ xxx.js文件：
+
+> ``` 
+> window.onerror = function(err) {
+> 	log('window.onerror: ' + err)
+> }
+> ```
+> 
+> ``` 
+> function connectWebViewJavascriptBridge(callback) {
+> 	if (window.WebViewJavascriptBridge) {
+> 		callback(WebViewJavascriptBridge)
+> 	} else {
+> 		document.addEventListener('WebViewJavascriptBridgeReady', function() {
+> 			callback(WebViewJavascriptBridge)
+> 		}, false)
+> 	}
+> }
+> ```
+> 
+> ``` 
+> connectWebViewJavascriptBridge(function(bridge) {
+>     bridge.init(function(message, responseCallback) {
+>         alert('进入了init方法了');
+> 		responseCallback(data)
+> 	})
+>     bridge.callHandler("hello", {}, function(data) {
+>         //data ==  oc返回的数据
+>         /*
+>          处理js的逻辑
+>          ...
+>          */
+>     });
+> })
+> ```
+
+OC代码:
+
+> ``` 
+> self.bridge = [WebViewJavascriptBridge bridgeForWebView:wkWebView webViewDelegate:self handler:^(id data, WVJBResponseCallback responseCallback) {
+>     NSLog(@"接收js的消息: %@", data);
+>     //响应数据给js
+>     responseCallback(@"OC传过去给js的");
+> }];
+> 
+> [_bridge send:@"test" responseCallback:^(id responseData) {
+>     NSLog(@"objc got response! %@", responseData);
+> }];
+> 
+> //js获取oc传递过去的版本号，hello跟js文件对应
+> [self.bridge registerHandler:@"hello" handler:^(id data, WVJBResponseCallback responseCallback) {
+>     //响应数据给js
+>     responseCallback(@"hello");
+> }];
+> ```
+
+如上代码是没有问题的，在刚刚打开WebView的时候，第一个url开始load网页（假设网页：www.hello.com/one），可以把xxx.js的代码load完，可以运行connectWebViewJavascriptBridge函数里面的代码，也可以调用到oc定义的接口，但是如果在刚刚load的url中，点击了另一个url（假设网页：www.hello.com/two），也就是在第一个界面进入了第二个webview界面，这样的话，WebViewJavascriptBridge用的是同一个对象，不会再去执行connectWebViewJavascriptBridge函数，那么如果在第二个界面里面不会调用connectWebViewJavascriptBridge里面的代码，就代表js调用不到oc的方法，这样我们需要把第二个界面也重新的加载执行WebViewJavascriptBridge。
+
+
+
+OC的webView代码：
+
+> ``` 
+> -(void)webViewDidFinishLoad:(UIWebView *)webView{
+> 
+>    if (webView != self.detailWebView) {return; }
+>     if (![[self.detailWebView         stringByEvaluatingJavaScriptFromString:@"typeofWebViewJavascriptBridge == 'object'"] isEqualToString:@"true"]){
+>     NSString *filePath = [[NSBundle mainBundle]pathForResource:@"WebViewJavascriptBridge.js"ofType:@"txt"];
+>     NSString *js = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+>     [self.detailWebView stringByEvaluatingJavaScriptFromString:js];
+> }
+> ```
+
+表示在webViewload完一个url之后，再次执行WebViewJavascriptBridge.js文件，就可以了。

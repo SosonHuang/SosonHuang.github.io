@@ -59,7 +59,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "敲敲代码，聊聊产品，探讨探讨商业模式，看看世界！"
+sidebar-about-description: "敲敲代码，研究新技术，研究app产品，看看商业模式，唱唱歌，打打篮球，游游泳！"
 sidebar-avatar: /img/avatar-whm.jpg     # use absolute URL.
 
 

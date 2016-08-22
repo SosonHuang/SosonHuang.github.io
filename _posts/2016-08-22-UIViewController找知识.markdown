@@ -115,7 +115,7 @@ typedef NS_ENUM(NSInteger, UIModalPresentationStyle) {
 
 > UIModalPresentationOverFullScreen NS_ENUM_AVAILABLE_IOS(8_0), 表示8.0以上有此枚举
 
-所以在开发中需要注意，如果是兼容7.0的版本，要记住不要让7.0调用8.0的枚举，否则会crash！
+所以在开发中需要注意，如果是兼容7.0的版本，要记住不要让8.0调用7.0的枚举，否则会crash！
 
 往下看，iOS 8上随着Size Class概念的提出，UIViewController支持了UIContentContainer这样一组新的协议
 
@@ -264,4 +264,3 @@ UIViewController生命周期：
 
 
 **苹果开发着官方文档：[https://developer.apple.com/reference/uikit?language=objc](https://developer.apple.com/reference/uikit?language=objc)   学以致用！**
-

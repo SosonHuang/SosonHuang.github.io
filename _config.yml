@@ -86,3 +86,5 @@ featured-condition-size: 0              # A tag will be featured if the size of 
 #         href: "http://blog.zhaojie.me/"
 #     }
 # ]
+
+theme: jekyll-theme-slate

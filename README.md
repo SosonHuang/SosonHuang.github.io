@@ -1,1 +1,1 @@
-Soson   soson.wang  简单就是美
+Soson   soson.site  简单就是美

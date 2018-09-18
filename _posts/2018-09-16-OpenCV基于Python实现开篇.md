@@ -14,7 +14,7 @@ tags:
 - OpenCV and Python
 
 
->OpenCV是开源、跨平台的计算机视觉库，由英特尔公司发起并参与开发，在商业和研究领域中可以免费使用。
+>OpenCV是开源、跨平台的计算机视觉库，由英特尔公司发起并参与开发，在商业和研究领域中可以免费使用，提供了C++、C、Python、Java接口，并支持Windows、Linux、Android、Mac OS平台。
 
 
 **OpenCV可以做什么?**
@@ -60,4 +60,16 @@ C++：https://docs.opencv.org/2.4/doc/tutorials/tutorials.html
 Python:https://github.com/abidrahmank/OpenCV2-Python/tree/master/Official_Tutorial_Python_Codes
 ```
 
+>OpenCV官网：https://opencv.org
+>
 >OpenCV帮助文档：http://docs.opencv.org
+>
+>OpenCV GitHub地址：https://github.com/opencv/opencv
+>
+>（里面存在部分不同平台使用OpenCV的Sample）
+
+```
+OpenCV针对平台的SDK下载地址（iOS，Android，C++等）
+https://sourceforge.net/projects/opencvlibrary/
+```
+
